@@ -87,6 +87,7 @@ def main() -> None:
     app.add_handler(CallbackQueryHandler(user.pref_callback, pattern=r"^pref:"))
     app.add_handler(CallbackQueryHandler(user.setstate_callback, pattern=r"^setstate:"))
     app.add_handler(CallbackQueryHandler(user.setcat_callback, pattern=r"^setcat:"))
+    app.add_handler(CallbackQueryHandler(user.account_callback, pattern=r"^(account|premium):"))
 
     # ----- Admin -----
     app.add_handler(CommandHandler("admin", admin.admin_help))
